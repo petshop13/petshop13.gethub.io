@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+</head>
+<body>
+    <h1>Something is wrong with the XAMPP installation :-(</h1>
+    <p>If you are not redirected, <a href="/dashboard/">click here</a> to go to the dashboard.</p>
+    <script>
+        // Automatically redirect to the dashboard
+        const protocol = window.location.protocol === "https:" ? "https://" : "http://";
+        const host = window.location.host;
+        window.location.href = `${protocol}${host}/dashboard/`;
+    </script>
+</body>
+</html>
+
